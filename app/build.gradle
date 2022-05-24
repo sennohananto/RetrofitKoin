@@ -63,6 +63,22 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
+    // Required -- JUnit 4 framework
+//    testImplementation "junit:junit:$jUnitVersion"
+//    // Optional -- Robolectric environment
+//    testImplementation "androidx.test:core:$androidXTestVersion"
+//    // Optional -- Mockito framework
+    testImplementation "org.mockito:mockito-core:4.5.1"
+//    // Optional -- mockito-kotlin
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
+//    // Optional -- Mockk framework
+    testImplementation "io.mockk:mockk:1.12.4"
+
+//    testImplementation "androidx.arch.core:core-testing:2.1.0"
+//    testImplementation "androidx.arch.core:core-common:2.1.0"
+//    testImplementation "androidx.arch.core:core-runtime:2.1.0"
+
+
 
 }
 

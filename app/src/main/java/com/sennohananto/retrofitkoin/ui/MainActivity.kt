@@ -29,10 +29,8 @@ class MainActivity : AppCompatActivity() {
 
                 Status.SUCCESS -> {
                     resource.data?.movies?.let {
-
                         val adapter = MoviesAdapter(it)
                         recyclerView.adapter = adapter
-
                     }
                     progressDialog.dismiss()
                 }

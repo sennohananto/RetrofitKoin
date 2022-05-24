@@ -9,8 +9,12 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-val BASE_URL = "https://api.themoviedb.org/"
+//Container -> Menampung
+//Menampung Instance
+
+val BASE_URL = "https://api.themoviedb.org/3/"
 val networkModule = module {
+    //Membuat instance OkHttpClient
     single {
         OkHttpClient.Builder()
             .addInterceptor { chain ->
@@ -24,6 +28,8 @@ val networkModule = module {
             }
             .build()
     }
+
+    //Membuat instance Retrofit
     single {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -31,10 +37,13 @@ val networkModule = module {
             .client(get())
             .build()
     }
+
+    //Membuat Instance ApiService
     single {
         get<Retrofit>().create(ApiService::class.java)
     }
 
+    //Membuat Instance ApiHelper
     singleOf(::ApiHelper)
 
 //    single{
