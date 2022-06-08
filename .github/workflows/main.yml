@@ -32,7 +32,6 @@ jobs:
         with:
          distribution: 'zulu' # See 'Supported distributions' for available options
          java-version: '11'
-      - run: java -cp java HelloWorldApp
       
       #Add Execute permission for Graddle Wrapper
       - name: Change Wrapper Permissions
