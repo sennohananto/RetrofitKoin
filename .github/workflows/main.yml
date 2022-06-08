@@ -45,13 +45,12 @@ jobs:
         run: ./gradlew build
         
       #Send APK to telegram
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: AppBrickie
         id: appBrickieBuild
         uses: DarthBenro008/app-brickie@v3.0
         with:
           type: "native"
           chatid: "cag9klkrards722nk8kg"
-          packagename: "com.sennohananto.retrofitkoin"
       - name: Get Automated Result
         run: echo "${{ steps.appBrickieBuild.outputs.result }}"
